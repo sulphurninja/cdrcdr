@@ -301,7 +301,7 @@ export default function Home() {
             </motion.div>
 
           </div>
-          <div className='grid grid-cols-3 lg:grid-cols-1 mx-4 md:mx-0 lg:mx-0 mt-10 lg:mt-4 md:pl-12   gap-4    '>
+          <div className='grid grid-cols-3 lg:grid-cols-1 mx-4 md:mx-0 lg:mx-0 mt-6 lg:mt-4 md:pl-12   gap-4    '>
             <motion.div
               initial={{ opacity: 0, scale: 0.8, y: 20 }}
               animate={{ opacity: 1, scale: 1, y: 0 }}
