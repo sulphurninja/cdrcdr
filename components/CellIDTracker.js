@@ -8,7 +8,7 @@ export default function CellIDTracker() {
          scale: 1.05,
          transition: { duration: 0.2 },
        }} className=' cursor-pointer'>
-         <img src='call5.png' className='h-8 md:h-12 ' />
+         <img src='call5.png' className='md:h-12 ' />
          </motion.div>
      </div>
  

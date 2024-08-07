@@ -182,7 +182,7 @@ export default function Home() {
         </div>
 
         <div className='lg:flex mt-8  lg:mx-0 justify-evenly'>
-          <div className='grid grid-cols-3 md:grid-cols-3 mx-4 md:mx-0 lg:mx-12  lg:grid-cols-1 mt-10 lg:mt-4 md:pl-12 lg:pl-0  gap-4    '>
+          {/* <div className='grid grid-cols-3 md:grid-cols-3 mx-4 md:mx-0 lg:mx-12  lg:grid-cols-1 mt-10 lg:mt-4 md:pl-12 lg:pl-0  gap-4    '>
             <motion.div
               initial={{ opacity: 0, scale: 0.8, y: 20 }}
               animate={{ opacity: 1, scale: 1, y: 0 }}
@@ -205,8 +205,8 @@ export default function Home() {
               <FaceDetection />
             </motion.div>
 
-          </div>
-          <div className='grid lg:grid-cols-1 grid-cols-3  mx-12 md:mx-0 lg:mx-0  gap-4 lg:mt-4 mt-10  '>
+          </div> */}
+          <div className='grid lg:grid-cols-1 grid-cols-3  mx-6 md:mx-0 lg:mx-0  gap-4 lg:mt-4 mt-10  '>
             <Link href='/IMEInfo'>
               <motion.div
                 initial={{ opacity: 0, scale: 0.8, y: 20 }}
