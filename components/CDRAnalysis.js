@@ -125,7 +125,7 @@ export default function CDRAnalysis() {
         );
       case 1:
         return (
-          <div className=" rounded-xl  absolute h-[40%] w-[95%] ml-[18%]   md:w-[70%] md:h-[80%] md:ml-[55%] md:mt-[18%] mt-[100%] z-50  ">
+          <div className=" rounded-xl  absolute h-[70%] w-[95%] ml-[18%]   md:w-[70%] md:h-[80%] md:ml-[55%] md:mt-[18%] mt-[100%] z-50  ">
 
             <img src="/3.png" className="h-[100%] w-[100%] rounded-2xl " />
 
@@ -148,7 +148,7 @@ export default function CDRAnalysis() {
         );
       case 2:
         return (
-          <div className=" rounded-xl  absolute h-[40%] w-[95%] ml-[18%]   md:w-[70%] md:h-[80%] md:ml-[55%] md:mt-[18%] mt-[100%] z-50  ">
+          <div className=" rounded-xl  absolute h-[70%] w-[95%] ml-[18%]   md:w-[70%] md:h-[80%] md:ml-[55%] md:mt-[18%] mt-[100%] z-50  ">
 
             <img src="/4.png" className="h-[100%] w-[100%] rounded-2xl " />
             {Array.isArray(commonIMEI) ? (
@@ -171,7 +171,7 @@ export default function CDRAnalysis() {
         );
       case 3:
         return (
-          <div className=" rounded-xl  absolute h-[40%] w-[95%] ml-[18%]   md:w-[70%] md:h-[80%] md:ml-[55%] md:mt-[18%] mt-[100%] z-50  ">
+          <div className=" rounded-xl  absolute h-[70%] w-[95%] ml-[18%]   md:w-[70%] md:h-[80%] md:ml-[55%] md:mt-[18%] mt-[100%] z-50  ">
 
             <img src="/6.png" className="h-[100%] w-[100%] rounded-2xl " />
             {Array.isArray(maxSMS) ? (
