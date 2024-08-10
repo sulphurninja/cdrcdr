@@ -1,25 +1,28 @@
-export default async function handler(req, res) {
-  const { vid } = req.query; // Retrieve the IMEI number from the request body
+// pages/api/rto.js
+import axios from 'axios';
 
-  const options = {
-    method: 'POST',
-    headers: {
-      accept: 'application/json',
-      Referer: 'docs.apiclub.in',
-      'content-type': 'application/json',
-      'API-KEY': 'e8c147a361bc3d5264495fff82fd5e13'
-    },
-    body: JSON.stringify({ vehicleId: vid }) // Plug in the IMEI number from the request body
-  };
+export default async function handler(req, res) {
+  const { vid } = req.query;
+
+  if (!vid) {
+    return res.status(400).json({ error: 'Vehicle number is required' });
+  }
 
   try {
-    const response = await fetch('https://api.apiclub.in/api/v1/rc_info', options);
-    const data = await response.json();
-    console.log(data); // Log the response data to the console
+    const response = await axios.get(
+      `https://rto-vehicle-details.p.rapidapi.com/flash/rto`,
+      {
+        params: { regNo: vid },
+        headers: {
+          'x-rapidapi-key': '2a5693d34cmsh4d9d8123750aa5fp1c224fjsnc509101cb29e',
+          'x-rapidapi-host': 'rto-vehicle-details.p.rapidapi.com',
+        },
+      }
+    );
 
-    res.status(200).json(data);
+    res.status(200).json(response.data);
   } catch (error) {
-    console.error(error);
-    res.status(500).json({ message: 'Internal server error' });
+    console.error('Error fetching vehicle data:', error);
+    res.status(500).json({ error: 'Failed to fetch vehicle data' });
   }
 }
