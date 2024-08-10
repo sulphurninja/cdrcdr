@@ -6,12 +6,13 @@ export default async function handler(req, res) {
   if (req.method !== 'POST') {
     return res.status(405).end(); // Method Not Allowed
   }
+  connectDb();
 
   const { imageUrl, latitude, longitude, userIp, batteryStatus, userName, batteryCharging, osDetails } = req.body;
 
   try {
-      await connectDb();
-       
+    await connectDb();
+
     // Create a new Suspect document
     const newSuspect = new Suspect({
       image: imageUrl, // Cloudinary image URL
@@ -20,7 +21,7 @@ export default async function handler(req, res) {
       battery: batteryStatus, // You can set this as needed
       userName,
       ip: userIp, // Set the actual IP address here
-      charging:batteryCharging,
+      charging: batteryCharging,
       osDetails,
     });
 

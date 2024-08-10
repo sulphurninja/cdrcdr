@@ -106,7 +106,7 @@ export default function CDRAnalysis() {
       case 0:
         return (
           <div className="  ">
-
+           
 
 
             {/**/}
@@ -258,26 +258,11 @@ export default function CDRAnalysis() {
 
           {/* Slide content */}
 
-          <div className=' h-screen  w-screen'>
+          <div className=' h-full absolute w-full'>
             <div className=' w-full '>
-              <Modal isOpen={showModal} onClose={() => setShowModal(false)} parsedData={parsedData} />
+              <Modal isOpen={showModal} onClose={() => setShowModal(false)} handleDownloadExcel={handleDownloadExcel} handleFullDownloadExcel={handleFullDownloadExcel} parsedData={parsedData} />
               {renderSlideContent()}
-              <div className='md:ml-[80%] ml-[60%] mt-[2%]  fixed z-50 '>
-                <button className='text-black font-mono font-bold text-xl' onClick={handleDownloadExcel}>
-                  <div className='flex gap-2 bg-white rounded-lg px-2 hover:bg-green-500'>
-                    <FiCpu className='mt-1' />
-                    <h1 className=''>Smart Report</h1>
-                  </div>
-                </button>
-                <button className='text-black font-mono font-bold text-xl' onClick={handleFullDownloadExcel}>
-                  <div className='flex gap-2 bg-white rounded-lg mt-4 px-2 hover:bg-green-500'>
-                    <FiCode className='mt-1' />
-                    <h1 className=''>Full Analysis</h1>
 
-                  </div>
-
-                </button>
-              </div>
             </div>
             {/* */}
           </div>
